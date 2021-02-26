@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+:root {
+  --fontfamily: "Roboto", sans-serif;
+  --white-color: #fff;
+  --paragaph-size: 1.4rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  background-color: white;
+  position: relative;
+}
+#header {
+  background: linear-gradient(rgba(34, 34, 51, 0.774), rgba(51, 68, 68, 0.863)),
+    url("https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8b25saW5lJTIwc3RvcmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar ul li a,
+.navbar-brand {
+  color: white !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-toggler span {
+  color: #fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#header div h1,
+#header div p {
+  font-family: var(--fontfamily);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#header div p {
+  font-size: var(--paragaph-size);
+}
+#products .row .col .btn-danger {
+  height: 3rem;
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+}
+#products .row .col .btn:hover {
+  background-color: orange !important;
+}
+#products img {
+  width: 100%;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  height: 15rem;
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-end;
+  background-color: rgba(224, 226, 226, 0.301);
+}
+
+/* home */
+.home {
+  background: linear-gradient(rgb(212, 212, 226), rgba(102, 102, 190, 0.5)),
+    url(https://images.unsplash.com/photo-1580857842878-e503a19ab9c2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTJ8fGJnfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.auth-toggle {
+  text-align: center;
+}
+.auth-toggle button {
+  background-color: #234;
+  border: 1px solid rgb(243, 243, 243);
+  color: white;
+  width: 63%;
+}
+.auth-toggle button:hover {
+  color: white !important;
+}
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+.form-control {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.dashboard {
 }
