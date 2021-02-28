@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import Header from "./Header";
-import Products from "./Products";
 import Footer from "./Footer";
 import Login from "./Login";
 import Register from "./Register";

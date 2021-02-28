@@ -32,7 +32,7 @@ function Menu() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/logout">
+              <Link className="nav-link" to="/">
                 Logout
               </Link>
             </li>

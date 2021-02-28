@@ -67,7 +67,7 @@ function Register() {
         </div>
         <button
           type="submit"
-          className="btn btn-secondary rounded"
+          className="btn btn-success float-right rounded"
           onClick={register}
         >
           Register

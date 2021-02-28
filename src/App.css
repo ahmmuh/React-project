@@ -74,10 +74,8 @@ footer {
   text-align: center;
 }
 .auth-toggle button {
-  background-color: #234;
-  border: 1px solid rgb(243, 243, 243);
-  color: white;
   width: 63%;
+  color: white;
 }
 .auth-toggle button:hover {
   color: white !important;
@@ -94,5 +92,12 @@ form {
   -o-border-radius: 20px;
 }
 
-.dashboard {
+#toggle-btn {
+  color: #222 !important;
+  border: dotted 1px #222;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+#toggle-btn:hover {
+  color: green !important;
 }

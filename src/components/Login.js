@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-
+import Modal from "./Modal";
 function Login() {
   const history = useHistory();
   const [user, setUser] = useState({
@@ -8,19 +8,20 @@ function Login() {
     password: "",
   });
 
-  // var entry = localStorage.getItem("entry");
-  // console.log("username: " + entry.user + "password: " + entry.pas);
-  // if (username.value == entry.user && password.value == entry.pass) {
-  //   alert("You have successfully logged in.");
-  // }
-
   const [error, setError] = useState("");
   const login = (event) => {
     event.preventDefault();
-    // let users = JSON.parse(localStorage.getItem("key"));
-    let authUser = localStorage.getItem("key");
-
-    // history.push("/dashboard");
+    let users = JSON.parse(localStorage.getItem("key"));
+    for (var i = 0; i < users.length; i++) {
+      if (
+        user.email === users[i].email &&
+        user.password === users[i].password
+      ) {
+        history.push("/dashboard");
+      } else {
+        alert("Skriv rätt och säg till att du inte lämnar tomma fält!");
+      }
+    }
   };
 
   const handleChange = (event) => {
@@ -30,7 +31,6 @@ function Login() {
       ...user,
       [event.target.name]: value,
     });
-    console.log(value);
   };
   return (
     <div className="container py-4">
@@ -60,7 +60,11 @@ function Login() {
             onChange={handleChange}
           />
         </div>
-        <button type="submit" className="btn btn-danger" onClick={login}>
+        <button
+          type="submit"
+          className="btn btn-success float-right"
+          onClick={login}
+        >
           Login
         </button>
       </form>
