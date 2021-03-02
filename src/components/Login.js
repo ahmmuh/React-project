@@ -8,7 +8,6 @@ function Login() {
     password: "",
   });
 
-  const [error, setError] = useState("");
   const login = (event) => {
     event.preventDefault();
     let users = JSON.parse(localStorage.getItem("key"));
@@ -68,7 +67,6 @@ function Login() {
           Login
         </button>
       </form>
-      <p>{error}</p>
     </div>
   );
 }

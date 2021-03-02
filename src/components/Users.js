@@ -6,7 +6,8 @@ function Users(props) {
   let userList = [];
 
   if (users) {
-    userList=  users.map((user, id) => {
+    console.log(users);
+    userList = users.map((user, id) => {
       return (
         <li key={id} className="list-group-item">
           <Link to={`/${id}`}> {user.name.first}</Link>

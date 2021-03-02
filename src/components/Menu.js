@@ -26,6 +26,7 @@ function Menu() {
                 Dashboard
               </Link>
             </li>
+
             <li className="nav-item active">
               <Link className="nav-link" to="/profile">
                 Profile

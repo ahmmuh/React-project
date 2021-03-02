@@ -7,13 +7,17 @@ function Register() {
     password: "",
   });
 
+  const history = useHistory();
+
   const [users, setUsers] = useState([]);
   const register = (event) => {
     event.preventDefault();
     setRegister({ ...registerState });
     users.push(registerState);
-    localStorage.setItem("key", JSON.stringify(users));
+    let registredUsers = localStorage.setItem("key", JSON.stringify(users));
     console.log(registerState);
+    setUsers(registredUsers);
+    history.push("/login");
   };
 
   const handleChange = (event) => {
