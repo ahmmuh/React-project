@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function Users(props) {
   const users = props.users;
   let userList = [];
-
   if (users) {
     console.log(users);
     userList = users.map((user, id) => {

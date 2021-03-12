@@ -10,14 +10,19 @@ function Register() {
   const history = useHistory();
 
   const [users, setUsers] = useState([]);
+
   const register = (event) => {
     event.preventDefault();
-    setRegister({ ...registerState });
-    users.push(registerState);
-    let registredUsers = localStorage.setItem("key", JSON.stringify(users));
-    console.log(registerState);
-    setUsers(registredUsers);
-    history.push("/login");
+    if (registerState.email === "" || registerState.password === "") {
+      alert("Du får inte lämna tomma fält");
+    } else {
+      setRegister({ ...registerState });
+      users.push(registerState);
+      let registredUsers = localStorage.setItem("key", JSON.stringify(users));
+      console.log(registerState);
+      setUsers(registredUsers);
+      history.push("/login");
+    }
   };
 
   const handleChange = (event) => {

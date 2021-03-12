@@ -11,14 +11,16 @@ function Login() {
   const login = (event) => {
     event.preventDefault();
     let users = JSON.parse(localStorage.getItem("key"));
-    for (var i = 0; i < users.length; i++) {
-      if (
-        user.email === users[i].email &&
-        user.password === users[i].password
-      ) {
-        history.push("/dashboard");
-      } else {
-        alert("Skriv rätt och säg till att du inte lämnar tomma fält!");
+    if (users) {
+      for (var i = 0; i < users.length; i++) {
+        if (
+          user.email === users[i].email &&
+          user.password === users[i].password
+        ) {
+          history.push("/dashboard");
+        } else {
+          alert("Skriv rätt och säg till att du inte lämnar tomma fält!");
+        }
       }
     }
   };
